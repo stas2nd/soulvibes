@@ -1,0 +1,7 @@
+include ../button/button.pug
+mixin news(date, title, text, buttonHref)
+    .news__item
+        p= date
+        h1= title
+        p= text
+        +button(buttonHref)
