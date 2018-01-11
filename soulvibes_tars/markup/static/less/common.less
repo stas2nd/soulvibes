@@ -47,6 +47,14 @@ input[type="radio"].visually-hidden {
     overflow: hidden;
 }
 
+.button {
+    display: block;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
 .container {
     .container();
 }
@@ -64,6 +72,7 @@ input[type="radio"].visually-hidden {
 }
 
 .player {
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -102,8 +111,118 @@ input[type="radio"].visually-hidden {
     width: 100%;
 }
 
+.player__playlist {
+    display: none;
+    position: absolute;
+    z-index: 4;
+
+    width: @width-content;
+    min-height: 236px;
+
+    color: @grey;
+
+    background-color: @white;
+    border-top: 1px solid @border-color;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.17);
+}
+
+.player__playlist::after {
+    position: absolute;
+    z-index: 5;
+    content: "";
+    top: -15px;
+    right: 6px;
+
+    width: 28px;
+    height: 21px;
+
+    background-image: url("__static__general/playlist.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player__table {
+    width: 900px;
+    margin: 20px 20px 5px;
+
+    border-collapse: collapse;
+    border: none;
+}
+
+.table__row {
+    height: 37px;
+
+    border-bottom: 1px solid @border-color;
+}
+
+.table__row:first-child,
+.table__row:last-child {
+    border: none;
+}
+
+.table__row:nth-child(1){
+    width: 40px;
+}
+
+.table__row:nth-child(2),
+.table__row:nth-child(3),
+.table__row:nth-child(4){
+    width: 220px;
+}
+
+.table__row:nth-child(5){
+    width: 60px;
+}
+
+.table__row:nth-child(6){
+    width: 40px;
+}
+
+.table__head {
+    padding-left: 20px;
+
+    text-align: left;
+}
+
+.table__cell {
+    padding-left: 20px;
+}
+
+.table__cell_num {
+    padding-left: 0;
+
+    text-align: center;
+}
+
+.table__cell_link {
+    text-align: right;
+}
+
+.table__cell_name,
+.table__cell_art,
+.table__cell_alb,
+.table__cell_time {
+
+}
+
+.table__link {
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+
+    background-image: url("__static__general/download.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+}
+
 .title {
     .pd-0();
+    margin-top: 56px;
+    margin-bottom: 54px;
 }
 
 .title__link {
@@ -128,7 +247,20 @@ input[type="radio"].visually-hidden {
 }
 
 .genres__button {
+    padding: 20px 103px;
     margin: 0 auto;
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @red;
+
+    background-color: @white;
+    border: none;
+    border: 1px solid @border-color;
+    border-radius: 2px;
 }
 
 .events {
@@ -157,15 +289,16 @@ input[type="radio"].visually-hidden {
 
     width: @width-content;
     height: calc( 100% + 60px );
-    margin: 0 230px;
+    margin: 0 252px;
 
     background-image: url("%=static=%content/people.png");
     background-repeat: no-repeat;
-    background-position: top right -22px;
+    background-position: top right;
 }
 
 .schedule__item {
     .pd-page();
+    padding-top: 65px;
 
     color: @white;
 }
@@ -179,6 +312,7 @@ input[type="radio"].visually-hidden {
 
 .schedule__title {
     .pd-0();
+    margin-top: 15px;
 
     font-size: 48px;
     line-height: 1.2em;
@@ -187,6 +321,7 @@ input[type="radio"].visually-hidden {
 
 .schedule__club {
     .pd-0();
+    margin-top: 17px;
 
     font-size: 14px;
     line-height: 24px;
@@ -218,7 +353,9 @@ input[type="radio"].visually-hidden {
 }
 
 .subscribe {
-    min-height: 323px;
+    min-height: 223px;
+    padding-top: 40px;
+    padding-bottom: 60px;
 
     color: @white;
 
@@ -237,9 +374,55 @@ input[type="radio"].visually-hidden {
 }
 
 .subscribe__tip {
+    width: 600px;
     .pd-0();
+    margin-top: 20px;
 
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+}
+
+.subscribe__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 615px;
+    height: 61px;
+    .pd-0();
+    padding-right: 5px;
+    margin-top: 30px;
+
+    background-color: @white;
+    border-radius: 5px;
+}
+
+.subscribe__field {
+    flex-grow: 1;
+
+    height: 61px;
+    .pd-0();
+    padding: 0 19px;
+
+    font-size: 14px;
+    line-height: 1.2em;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.subscribe__button {
+    padding: 17px 17px;
+    margin-left: auto;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    background-color: @back-red;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
 }
