@@ -1,1 +1,51 @@
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    width: @width-content;
+    .pd-page();
+    padding-top: 26px;
+}
+
+.header__logo {
+    margin: 0;
+
+    font-family: 'Caviar Dreams Bold', Arial, sans-serif;
+    font-size: 36px;
+    line-height: 1.2em;
+    text-decoration: none;
+    color: @white;
+}
+
+.main-navigation {
+    margin-left: auto;
+}
+
+.navigation-list {
+    display: flex;
+
+    .nl ();
+
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.navigation-list__item {
+    margin-right: 46px;
+}
+
+.navigation-list__item:last-child {
+    margin-right: 0px;
+}
+
+.navigation-list__link {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @white;
+}

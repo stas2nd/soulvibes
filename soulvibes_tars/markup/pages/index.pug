@@ -2,78 +2,93 @@ doctype html
 html(class="no-js", lang="en")
 
     include ../components/head/head.pug
-    include ../components/news/news.pug
-    include ../components/footer/footer.pug
     include ../components/header/header.pug
     include ../components/genre/genre.pug
+    include ../components/news/news.pug
+    include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
     body
         |%=symbols=%
-        +header()
-        main.container
-            .promo-image
-                img(src='__static__/img/content/promo.jpg' width='1400px' height='588px' alt='promo')
-            section.player
-                h1.player__title.visually-hidden PLAYER
-            section.genres
-                h1.genres__title
-                    a.genres__link(href='#genres') Genres Stations
-                +genre('top.png', 'Trending Top')
-                +genre('rock.png', 'Rock')
-                +genre('rnb.png', 'R n B')
-                +genre('alter.png', 'Alternative')
-                +genre('country.png', 'Country')
-                +genre('pop.png', 'Pop')
-                +genre('jazz.png', 'Jazz')
-                +genre('reggae.png', 'Reggae')
-            section.events
-                h1.events__title
-                    a.events__link(href='#') Upcoming Events
-                .events__schedule.schedule
-                    .schedule__item
-                        p.schedule__date Wednesday  / 22 Dec 2017 /  12:00 PM
-                        h1.schedule__title Linkin Park
-                        p.schedule__club Ziggo Dome
-                        address.schedule__address De Passage 100, Amsterdam, Netherlands
-                    .schedule__item
-                        p.schedule__date Wednesday  / 22 Dec 2017 /  12:00 PM
-                        h1.schedule__title Burger kill
-                        p.schedule__club Ziggo Dome
-                        address.schedule__address De Passage 100, Amsterdam, Netherlands
-            section.news
-                h1.news__title
-                    a.news__link(href='#') Latest News
-                +news(
-                '21 MARCH 2017',
-                'Donec ac pellentesque justo, quis rutrum tortor',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',
-                '#'
-                )
-                +news(
-                '21 MARCH 2017',
-                'Donec ac pellentesque justo, quis rutrum tortor',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',
-                '#'
-                )
-                +news(
-                '21 MARCH 2017',
-                'Donec ac pellentesque justo, quis rutrum tortor',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',
-                '#'
-                )
-            section.contacts
-                h1.contacts__title
-                    a(href='#') Contact Us
-                .contacts__subscribe.subscribe
-                    h1.subscribe__title Join Our Community
-                    p.subscribe__tip Be among the first to hear about our new tracks, events, news and so much more!
-                    .subscribe__field
-                        form
-                            input(type='text' placeholder='Your email address')
-                            button(type='submit') Subscribes
-        +footer()
+        .body-wrapper
+            +header()
+            main
+                .promo-image
+                    img.promo-image__img(src='__static__/img/content/promo.jpg' width='1400px' height='588px' alt='promo')
+                section.player
+                    h1.player__title.visually-hidden PLAYER
+                    button.player__button.player__button_play(aria-label='play song')
+                    .player__slider.slider
+                        p.slider__song The Diary of Jane - Breaking Benjamin
+                        p.slider__time 3:20
+                        .slider__range
+                            button.slider__button
+                    button.player__button.player__button_vol(aria-label='volume')
+                    button.player__button.player__button_prev(aria-label='previous song')
+                    button.player__button.player__button_next(aria-label='next song')
+                    button.player__button.player__button_loop(aria-label='loop song')
+                    button.player__button.player__button_qu(aria-label='queue')
+                section.genres
+                    h1.genres__title.title
+                        a.genres__link.title__link(name='genres') Genres Stations
+                    .genres-wrapper
+                        +genre('top.png', 'Trending Top', '#')
+                        +genre('rock.png', 'Rock', '#')
+                        +genre('rnb.png', 'R n B','#')
+                        +genre('alter.png', 'Alternative','#')
+                        +genre('country.png', 'Country','#')
+                        +genre('pop.png', 'Pop','#')
+                        +genre('jazz.png', 'Jazz','#')
+                        +genre('reggae.png', 'Reggae','#')
+                    button.button.genres__button Load more
+                section.events
+                    h1.events__title.title
+                        a.events__link.title__link(name='events') Upcoming Events
+                    .events__schedule.schedule
+                        .schedule__item
+                            p.schedule__date Wednesday  / 22 Dec 2017 /  12:00 PM
+                            h1.schedule__title Linkin Park
+                            p.schedule__club Ziggo Dome
+                            address.schedule__address De Passage 100, Amsterdam, Netherlands
+                        .schedule__item
+                            p.schedule__date Wednesday  / 22 Dec 2017 /  12:00 PM
+                            h1.schedule__title Burger kill
+                            p.schedule__club Ziggo Dome
+                            address.schedule__address De Passage 100, Amsterdam, Netherlands
+                section.news
+                    h1.news__title.title
+                        a.news__link.title__link(name='news') Latest News
+                    .news__wrapper
+                        +news(
+                        '21 MARCH 2017',
+                        'Donec ac pellentesque justo, quis rutrum tortor',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',
+                        '#'
+                        )
+                        +news(
+                        '21 MARCH 2017',
+                        'Donec ac pellentesque justo, quis rutrum tortor',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',
+                        '#'
+                        )
+                        +news(
+                        '21 MARCH 2017',
+                        'Donec ac pellentesque justo, quis rutrum tortor',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',
+                        '#'
+                        )
+                section.contacts
+                    h1.contacts__title.title
+                        a.contacts__link.title__link(name='contacts') Contact Us
+                    .contacts__subscribe.subscribe
+                        h1.subscribe__title Join Our Community
+                        p.subscribe__tip Be among the first to hear about our new tracks, events, news and so much more!
+                        form.subscribe__form(action='https://echo.htmlacademy.ru' method='get')
+                                label.visually-hidden(for='subscribe__field') Your email address
+                                input.subscribe__field(type='text' name='email' id='subscribe__field' placeholder='Your email address')
+                                button.subscribe__button(type='submit') Subscribes
+            +footer()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

@@ -1,22 +1,245 @@
 // Common styles of the project
 
 html, body {
+    min-width: @width-page;
     height: 100%;
 }
 
-.page {
-    // Стили для body
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    color: @grey;
 }
 
-.page__wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
+.body-wrapper {
+    position: relative;
+
+    width: @width-page;
+
+    .container();
 }
 
-* html .page__wrapper {
-    height: 100%;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.page__buffer {
-    height: 50px;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    -webkit-clip-path: inset(100%);
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    .container();
+}
+
+.promo-image {
+    overflow: hidden;
+
+    height: 549px;
+}
+
+.promo-image__img {
+    display: block;
+
+    .pd-0();
+}
+
+.player {
+    display: flex;
+    align-items: center;
+
+    height: 80px;
+    .pd-page();
+
+    background-color: @back-red;
+
+    color: @white;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 560px;
+}
+
+.slider__song {
+    .pd-0();
+
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.slider__time {
+    .pd-0();
+    margin-left: auto;
+
+    font-size: 12px;
+    line-height: 1.2em;
+}
+
+.slider__range {
+    width: 100%;
+}
+
+.title {
+    .pd-0();
+}
+
+.title__link {
+    .pd-0();
+
+    font-size: 36px;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.genres {
+    display: flex;
+    flex-direction: column;
+
+    .pd-page();
+}
+
+.genres-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genres__button {
+    margin: 0 auto;
+}
+
+.events {
+    overflow: hidden;
+}
+
+.events__title {
+    .pd-page();
+}
+
+.schedule {
+    position: relative;
+
+    height: 485px;
+
+    background-color: @back-red;
+    background-image: url("%=static=%content/background-events.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.schedule::after {
+    content: "";
+    position: absolute;
+    top: -60px;
+
+    width: @width-content;
+    height: calc( 100% + 60px );
+    margin: 0 230px;
+
+    background-image: url("%=static=%content/people.png");
+    background-repeat: no-repeat;
+    background-position: top right -22px;
+}
+
+.schedule__item {
+    .pd-page();
+
+    color: @white;
+}
+
+.schedule__date {
+    .pd-0();
+
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.schedule__title {
+    .pd-0();
+
+    font-size: 48px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+.schedule__club {
+    .pd-0();
+
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.schedule__address {
+    .pd-0();
+
+    font-size: 14px;
+    line-height: 24px;
+    font-style: normal;
+}
+
+.news {
+    .pd-page();
+}
+
+.news__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts__title {
+    .pd-page();
+}
+
+.contacts__subscribe {
+    .pd-page();
+}
+
+.subscribe {
+    min-height: 323px;
+
+    color: @white;
+
+    background-color: @grey;
+    background-image: url("__static__content/background-subscribe.jpg");
+    background-repeat: no-repeat;
+}
+
+.subscribe__title {
+    .pd-0();
+
+    font-family: 'Lora', Times, serif;
+    font-size: 60px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+.subscribe__tip {
+    .pd-0();
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
 }
