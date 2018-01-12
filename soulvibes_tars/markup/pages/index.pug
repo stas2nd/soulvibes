@@ -19,17 +19,23 @@ html(class="no-js", lang="en")
                     img.promo-image__img(src='__static__/img/content/promo.jpg' width='1400px' height='588px' alt='promo')
                 section.player
                     h1.player__title.visually-hidden PLAYER
-                    button.player__button.player__button_play(aria-label='play song')
+                    button.player__button.player__button_play(type='button' aria-label='play song')
+                        img.player__image.player__image_play(src='__static__/img/general/play.png' width='14px' height='25px' alt='play')
                     .player__slider.slider
                         p.slider__song The Diary of Jane - Breaking Benjamin
                         p.slider__time 3:20
                         .slider__range
-                            button.slider__button
-                    button.player__button.player__button_vol(aria-label='volume')
-                    button.player__button.player__button_prev(aria-label='previous song')
-                    button.player__button.player__button_next(aria-label='next song')
-                    button.player__button.player__button_loop(aria-label='loop song')
-                    button.player__button.player__button_qu(aria-label='queue')
+                            button.slider__button(type='button' aria-label='song')
+                    button.player__button.player__button_vol(type='button' aria-label='volume')
+                        img.player__image.player__image_vol(src='__static__/img/general/volume.png' width='22px' height='18px' alt='volume')
+                    button.player__button.player__button_prev(type='button' aria-label='previous song')
+                        img.player__image.player__image_prev(src='__static__/img/general/prev.png' width='12px' height='17px' alt='previous')
+                    button.player__button.player__button_next(type='button' aria-label='next song')
+                        img.player__image.player__image_next(src='__static__/img/general/next.png' width='12px' height='17px' alt='next')
+                    button.player__button.player__button_loop(type='button' aria-label='loop song')
+                        img.player__image.player__image_loop(src='__static__/img/general/loop.png' width='18px' height='20px' alt='loop')
+                    button.player__button.player__button_qu(type='button' aria-label='queue')
+                        img.player__image.player__image_qu(src='__static__/img/general/queue.png' width='16px' height='13px' alt='queue')
                     .player__playlist
                         table.player__table.table
                             tr.table__row
@@ -83,14 +89,14 @@ html(class="no-js", lang="en")
                     h1.genres__title.title
                         a.genres__link.title__link(name='genres') Genres Stations
                     .genres-wrapper
-                        +genre('top.png', 'Trending Top', '#')
-                        +genre('rock.png', 'Rock', '#')
-                        +genre('rnb.png', 'R n B','#')
-                        +genre('alter.png', 'Alternative','#')
-                        +genre('country.png', 'Country','#')
-                        +genre('pop.png', 'Pop','#')
-                        +genre('jazz.png', 'Jazz','#')
-                        +genre('reggae.png', 'Reggae','#')
+                        +genre('top.png', 'Trending Top', 'top', '#')
+                        +genre('rock.png', 'Rock', 'rock','#')
+                        +genre('rnb.png', 'R n B', 'rnb','#')
+                        +genre('alter.png', 'Alternative', 'alt','#')
+                        +genre('country.png', 'Country', 'cntr','#')
+                        +genre('pop.png', 'Pop', 'pop','#')
+                        +genre('jazz.png', 'Jazz', 'jazz','#')
+                        +genre('reggae.png', 'Reggae', 'rgg','#')
                     button.button.genres__button Load more
                 section.events
                     h1.events__title.title
@@ -101,6 +107,34 @@ html(class="no-js", lang="en")
                             h1.schedule__title Linkin Park
                             p.schedule__club Ziggo Dome
                             address.schedule__address De Passage 100, Amsterdam, Netherlands
+                            .schedule__popup.popup
+                                h2.popup__title Linkin Park
+                                p.popup__tour One More Light World Tour
+                                table.popup__table.popup-table
+                                    tr.popup-table__row
+                                        th.popup-table__head Address & Date
+                                        th.popup-table__head.popup-table__head_pr Price
+                                    tr.popup-table__row
+                                        td.popup-table__cell.cell
+                                            p.cell__p.cell__p_addr Mohegan Sun Arena Uncasville, CT
+                                            p.cell__p.cell__p_date Wed , 22 Dec 2017 , 12:00 PM
+                                        td.popup-table__cell.cell
+                                            span.cell__p.cell__p_unit $
+                                            span.cell__p.cell__p_summ 100
+                                p.popup__time-title Time Remaining
+                                .popup__time
+                                    .popup__count.count
+                                        p.count__num 04
+                                        p.count__unit Days
+                                    .popup__count.count
+                                        p.count__num 07
+                                        p.count__unit Hours
+                                    .popup__count.count
+                                        p.count__num 46
+                                        p.count__unit Minutes
+                                a.popup__link.button(href='#') Purchase Tickets
+                                a.popup__share(href='#')
+                                    span.visually-hidden Share
                         .schedule__item
                             p.schedule__date Wednesday  / 22 Dec 2017 /  12:00 PM
                             h1.schedule__title Burger kill

@@ -1,4 +1,4 @@
-mixin genre(imgSrc, genreTitle, link)
+mixin genre(imgSrc, genreTitle, imgName, link)
     a.genre(href= link)
-        img.genre__img(src='__static__/img/general/' + imgSrc)
+        img.genre__img(src='__static__/img/general/' + imgSrc class='genre__img_' + imgName)
         h1.genre__title= genreTitle
