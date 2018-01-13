@@ -16,12 +16,26 @@
 }
 
 .block__date {
+    position: relative;
+
     .pd-0();
     padding-left: 16px;
 
     font-size: 11px;
     line-height: 24px;
     font-weight: 700;
+}
+
+.block__date::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 1px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: @border-color;
 }
 
 .block__title {

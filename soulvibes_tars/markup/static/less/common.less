@@ -321,11 +321,33 @@ input[type="radio"].visually-hidden {
 }
 
 .title {
+    position: relative;
+
     .pd-0();
     margin-top: 52px;
     margin-bottom: 52px;
     margin-left: -2px;
 }
+
+.title::before {
+    position: absolute;
+    content: "";
+    left: -230px;
+    top: 14px;
+
+    width: 210px;
+    height: 12px;
+
+    background-image: url("__static__general/rectangle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.events__title::before,
+.contacts__title::before {
+    left: 0;
+}
+
 
 .title__link {
     .pd-0();
@@ -416,12 +438,39 @@ input[type="radio"].visually-hidden {
     padding-top: 63px;
 }
 
+.schedule__item::before {
+    position: absolute;
+    content: "";
+    top: 33px;
+    left: 239px;
+
+    width: 2px;
+    height: 100%;
+
+    background-color: white;
+}
+
 .schedule__date {
+    position: relative;
+
     .pd-0();
     margin-left: 43px;
 
     font-size: 14px;
     line-height: 1.2em;
+}
+
+.schedule__date::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -39px;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: white;
+    border-radius: 50%;
 }
 
 .schedule__title {
