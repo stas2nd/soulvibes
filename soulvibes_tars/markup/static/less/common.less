@@ -200,15 +200,13 @@ input[type="radio"].visually-hidden {
 }
 
 .player__playlist {
-    //display: none;
+    display: none;
     position: absolute;
     z-index: 4;
-    right: 250px;
-    //top: 85px;
-    top: -85px;
+    right: 230px;
+    top: 84px;
 
     width: @width-content;
-    min-height: 236px;
 
     color: @grey;
 
@@ -234,14 +232,17 @@ input[type="radio"].visually-hidden {
 
 .player__table {
     width: 900px;
-    margin: 8px 20px 5px;
+    margin: 8px 20px 7px;
+    padding-top: 8px;
+
+    vertical-align: top;
 
     border-collapse: collapse;
     border: none;
 }
 
 .table__row {
-    height: 36px;
+    height: 37px;
 
     border-bottom: 1px solid @border-color;
 }
@@ -251,21 +252,21 @@ input[type="radio"].visually-hidden {
     border: none;
 }
 
-.table__row:nth-child(1){
+.table__cell_num{
     width: 40px;
 }
 
-.table__row:nth-child(2),
-.table__row:nth-child(3),
-.table__row:nth-child(4){
+.table__cell_name,
+.table__cell_art,
+.table__cell_alb {
     width: 220px;
 }
 
-.table__row:nth-child(5){
+.table__cell_time {
     width: 60px;
 }
 
-.table__row:nth-child(6){
+.table__cell_link {
     width: 40px;
 }
 
@@ -341,8 +342,6 @@ input[type="radio"].visually-hidden {
 
     .pd-page();
     margin-bottom: 35px;
-
-    background-color: @red;
 }
 
 .genres-wrapper {
