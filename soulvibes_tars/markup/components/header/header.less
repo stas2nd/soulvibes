@@ -20,6 +20,15 @@
     color: @white;
 }
 
+.header__logo:hover,
+.header__logo:focus {
+    color: @red;
+}
+
+.header__logo:active {
+    opacity: 0.5;
+}
+
 .main-navigation {
     margin-left: auto;
     margin-right: 7px;
@@ -51,4 +60,13 @@
     text-decoration: none;
     text-transform: uppercase;
     color: @white;
+}
+
+.navigation-list__link:hover,
+.navigation-list__link:focus {
+    opacity: 0.5;
+}
+
+.navigation-list__link:active {
+    color: @red;
 }

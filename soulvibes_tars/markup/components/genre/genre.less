@@ -15,6 +15,16 @@
     border-radius: 3px;
 }
 
+.genre:hover,
+.genre:focus {
+    border-color: @red;
+}
+
+.genre:hover .genre__title,
+.genre:focus .genre__title {
+    color: @red;
+}
+
 .genre:nth-child(4n) {
     margin-right: 0;
 }

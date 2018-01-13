@@ -113,6 +113,16 @@ input[type="radio"].visually-hidden {
     background-color: transparent;
 }
 
+.player__button:hover,
+.player__button:focus {
+    background-color: white;
+}
+
+.player__button:hover .player__image,
+.player__button:focus .player__image {
+    filter: invert(100%);
+}
+
 .player__button:nth-last-of-type(1) {
     margin-right: 0;
 }
