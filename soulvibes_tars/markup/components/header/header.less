@@ -1,11 +1,17 @@
 .header {
     position: absolute;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
 
     width: @width-content;
     .pd-page();
     padding-top: 24px;
+
+    @media screen and (max-width: 1280px) {
+        .pd-page1280();
+        padding-top: 24px;
+    }
 }
 
 .header__logo {

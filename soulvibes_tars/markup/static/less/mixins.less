@@ -30,16 +30,25 @@
 }
 // You can add your own mixins here:
 
-.container() {
-    width: @width-page;
-    margin: 0 auto;
-}
-
 .pd-0() {
     padding: 0;
     margin: 0;
 }
 
+.container() {
+    width: @width-page;
+    margin: 0 auto;
+}
+
+.container1280() {
+    width: @width-page1280;
+    margin: 0 auto;
+}
+
 .pd-page() {
-    padding: 0 230px;
+    padding: 0 @paddings;
+}
+
+.pd-page1280() {
+    padding: 0 @paddings1280;
 }

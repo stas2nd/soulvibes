@@ -16,10 +16,18 @@ body {
 
 .body-wrapper {
     position: relative;
+    overflow: hidden;
 
     width: @width-page;
 
     .container();
+
+    @media screen and (max-width: 1280px) {
+        width: @width-page1280;
+
+        .container1280()
+    }
+
 }
 
 img {
@@ -57,9 +65,14 @@ input[type="radio"].visually-hidden {
 
 .container {
     .container();
+
+    @media screen and (max-width: 1280px) {
+        .container1280();
+    }
 }
 
 .promo-image {
+    position: relative;
     overflow: hidden;
 
     height: 549px;
@@ -68,6 +81,7 @@ input[type="radio"].visually-hidden {
 .promo-image__title {
     position: absolute;
     top: 127px;
+    z-index: 2;
 
     width: 560px;
     .pd-page();
@@ -78,12 +92,22 @@ input[type="radio"].visually-hidden {
     line-height: 1.2em;
     font-weight: 700;
     color: @white;
+
+    @media screen and (max-width: 1280px) {
+        .pd-page1280();
+    }
 }
 
-.promo-image__img {
+img.promo-image__img {
+    position: relative;
     display: block;
 
+    min-width: 1400px;
     .pd-0();
+
+    @media screen and (max-width: 1280px) {
+        left: -60px;
+    }
 }
 
 .player {
@@ -97,6 +121,10 @@ input[type="radio"].visually-hidden {
     background-color: @back-red;
 
     color: @white;
+
+    @media screen and (max-width: 1280px) {
+        .pd-page1280();
+    }
 }
 
 .player__button {
@@ -266,7 +294,7 @@ input[type="radio"].visually-hidden {
     display: none;
     position: absolute;
     z-index: 4;
-    right: 230px;
+    right: @paddings;
     top: 84px;
 
     width: @width-content;
@@ -413,11 +441,16 @@ input[type="radio"].visually-hidden {
     background-image: url("__static__general/rectangle.png");
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
 .events__title::before,
 .contacts__title::before {
     left: 0;
+
+    @media screen and (max-width: 1280px) {
+        left: -60px;
+    }
 }
 
 
@@ -436,6 +469,11 @@ input[type="radio"].visually-hidden {
 
     .pd-page();
     margin-bottom: 35px;
+
+    @media screen and (max-width: 1280px) {
+        .pd-page1280();
+    }
+
 }
 
 .genres-wrapper {
@@ -482,6 +520,10 @@ input[type="radio"].visually-hidden {
 .events__title {
     .pd-page();
     margin-bottom: 55px;
+
+    @media screen and (max-width: 1280px) {
+        .pd-page1280();
+    }
 }
 
 .schedule {
@@ -503,22 +545,31 @@ input[type="radio"].visually-hidden {
 
     width: 544px;
     height: 604px;
-    margin: 0 208px;
+    margin: 0 calc(@paddings - 22px);
 
     background-image: url("%=static=%content/people.png");
     background-repeat: no-repeat;
     background-position: top right;
+
+    @media screen and (max-width: 1280px) {
+        margin: 0 calc(@paddings1280 - 22px);
+    }
 }
 
 .schedule__item {
     position: relative;
+    z-index: 2;
 
-    width: 385px;
-    margin-left: 230px;
+    width: 500px;
+    margin-left: @paddings;
     padding-right: 0;
     padding-top: 66px;
 
-    color: @white;
+    color: white;
+
+    @media screen and (max-width: 1280px) {
+        margin-left: @paddings1280;
+    }
 }
 
 .schedule__item:last-child {
@@ -810,6 +861,10 @@ input[type="radio"].visually-hidden {
 .news {
     .pd-page();
     margin-bottom: 163px;
+
+    @media screen and (max-width: 1280px) {
+        .pd-page1280();
+    }
 }
 
 .news__title {
@@ -832,10 +887,18 @@ input[type="radio"].visually-hidden {
 .contacts__title {
     .pd-page();
     margin-bottom: 51px;
+
+    @media screen and (max-width: 1280px) {
+        .pd-page1280();
+    }
 }
 
 .contacts__subscribe {
     .pd-page();
+
+    @media screen and (max-width: 1280px) {
+        .pd-page1280();
+    }
 }
 
 .subscribe {
@@ -848,6 +911,10 @@ input[type="radio"].visually-hidden {
     background-color: @grey;
     background-image: url("__static__content/background-subscribe.jpg");
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 1280px) {
+        background-position: -60px;
+    }
 }
 
 .subscribe__title {
