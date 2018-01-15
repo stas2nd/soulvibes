@@ -1,6 +1,13 @@
 var playbtn = document.querySelector('.player__button_play');
+
 var listbtn = document.querySelector('.player__button_qu');
 var playlist = document.querySelector('.player__playlist');
+
+var eventone = document.querySelector('.schedule__item_one');
+if (eventone) {
+    var popupone = document.querySelector('.schedule__popup_one');
+}
+
 
 if (playbtn) {
     playbtn.addEventListener('click', function (evt) {
@@ -13,9 +20,9 @@ if (playbtn) {
     });
 }
 
-if (listbtn && playlist) {
-    listbtn.addEventListener('click', function (evt) {
+if (popupone) {
+    eventone.addEventListener('click', function (evt) {
         evt.preventDefault();
-        playlist.classList.toggle('display_block');
+        popupone.classList.toggle('display-flex');
     });
 }

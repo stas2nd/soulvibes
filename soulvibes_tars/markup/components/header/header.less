@@ -23,6 +23,12 @@
         .pd-page768();
         padding-top: 24px;
     }
+
+    @media screen and (max-width: 560px) {
+        width: @width-content560;
+        .pd-page560();
+        padding-top: 24px;
+    }
 }
 
 .header__logo {
@@ -36,6 +42,7 @@
     letter-spacing: 2px;
     text-decoration: none;
     color: @white;
+
 }
 
 .header__logo:hover,
@@ -49,7 +56,7 @@
 
 .main-navigation {
     margin-left: auto;
-    margin-right: 7px;
+    margin-right: 5px;
     margin-top: 15px;
 }
 
@@ -64,6 +71,10 @@
 
 .navigation-list__item {
     margin-right: 46px;
+
+    @media screen and (max-width: 560px) {
+        margin-right: 20px;
+    }
 }
 
 .navigation-list__item:last-child {
@@ -79,6 +90,10 @@
     text-decoration: none;
     text-transform: uppercase;
     color: @white;
+
+    @media screen and (max-width: 560px) {
+        font-size: 12px;
+    }
 }
 
 .navigation-list__link:hover,
