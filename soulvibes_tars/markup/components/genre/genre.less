@@ -13,6 +13,25 @@
 
     border: 1px solid @border-color;
     border-radius: 3px;
+
+    @media screen and (max-width: 768px) {
+        margin-right: 14px;
+    }
+
+}
+
+.genre:nth-child(3n) {
+    @media screen and (max-width: 768px) {
+        margin-right: 0;
+    }
+}
+
+.genre:nth-child(4n) {
+    margin-right: 0;
+
+    @media screen and (max-width: 768px) {
+        margin-right: 14px;
+    }
 }
 
 .genre:hover,
@@ -24,10 +43,6 @@
 .genre:hover .genre__title,
 .genre:focus .genre__title {
     color: @red;
-}
-
-.genre:nth-child(4n) {
-    margin-right: 0;
 }
 
 .genre__img {

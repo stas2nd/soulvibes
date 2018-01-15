@@ -25,13 +25,19 @@ body {
     @media screen and (max-width: 1280px) {
         width: @width-page1280;
 
-        .container1280()
+        .container1280();
     }
 
     @media screen and (max-width: 1024px) {
         width: @width-page1024;
 
-        .container1024()
+        .container1024();
+    }
+
+    @media screen and (max-width: 768px) {
+        width: @width-page768;
+
+        .container768();
     }
 
 }
@@ -79,6 +85,10 @@ input[type="radio"].visually-hidden {
     @media screen and (max-width: 1024px) {
         .container1024();
     }
+
+    @media screen and (max-width: 768px) {
+        .container768();
+    }
 }
 
 .promo-image {
@@ -110,6 +120,10 @@ input[type="radio"].visually-hidden {
     @media screen and (max-width: 1024px) {
         .pd-page1024();
     }
+
+    @media screen and (max-width: 768px) {
+        .pd-page768();
+    }
 }
 
 img.promo-image__img {
@@ -125,6 +139,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1024px) {
         left: calc(-(@paddings - @paddings1024));
+    }
+
+    @media screen and (max-width: 768px) {
+        left: calc(-(@paddings - @paddings768));
     }
 }
 
@@ -147,6 +165,10 @@ img.promo-image__img {
     @media screen and (max-width: 1024px) {
         .pd-page1024();
     }
+
+    @media screen and (max-width: 768px) {
+        .pd-page768();
+    }
 }
 
 .player__button {
@@ -161,6 +183,10 @@ img.promo-image__img {
     border: 2px solid @white;
     border-radius: 50%;
     background-color: transparent;
+
+    @media screen and (max-width: 768px) {
+        margin-right: 9px;
+    }
 }
 
 .player__button:hover,
@@ -178,6 +204,11 @@ img.promo-image__img {
     height: 43px;
     margin-right: 18px;
     margin-left: -1px;
+
+    @media screen and (max-width: 768px) {
+        margin-right: 8px;
+        margin-left: -2px;
+    }
 }
 
 .player__button:nth-last-of-type(1) {
@@ -187,12 +218,20 @@ img.promo-image__img {
 .player__button:nth-last-of-type(1):active {
     margin-right: -2px;
     margin-left: -1px;
+
+    @media screen and (max-width: 768px) {
+        margin-left: -2px;
+    }
 }
 
 .player__button_play {
     width: 58px;
     height: 58px;
     margin-right: 24px;
+
+    @media screen and (max-width: 768px) {
+        margin-right: 13px;
+    }
 }
 
 .player__button_play .player__image_pause {
@@ -203,6 +242,11 @@ img.promo-image__img {
     width: 61px;
     height: 61px;
     margin-right: 22px;
+
+    @media screen and (max-width: 768px) {
+        margin-right: 11px;
+        margin-left: -1px;
+    }
 }
 
 .player__image {
@@ -243,6 +287,10 @@ img.promo-image__img {
     width: 560px;
     height: 45px;
     margin-right: 18px;
+
+    @media screen and (max-width: 768px) {
+        width: 360px;
+    }
 }
 
 .slider__song {
@@ -334,6 +382,11 @@ img.promo-image__img {
     @media screen and (max-width: 1024px) {
         right: @paddings1024;
     }
+
+    @media screen and (max-width: 768px) {
+        right: @paddings768;
+        width: @width-content768;
+    }
 }
 
 .display_block {
@@ -364,6 +417,10 @@ img.promo-image__img {
 
     border-collapse: collapse;
     border: none;
+
+    @media screen and (max-width: 768px) {
+        width: 640px;
+    }
 }
 
 .table__row {
@@ -379,20 +436,43 @@ img.promo-image__img {
 
 .table__cell_num{
     width: 40px;
+
+    @media screen and (max-width: 768px) {
+        width: 30px;
+    }
 }
 
 .table__cell_name,
 .table__cell_art,
 .table__cell_alb {
     width: 220px;
+
+    @media screen and (max-width: 768px) {
+        width: 130px;
+    }
+}
+
+.table__cell_alb {
+    @media screen and (max-width: 768px) {
+        width: 140px;
+    }
 }
 
 .table__cell_time {
     width: 60px;
+
+    @media screen and (max-width: 768px) {
+        width: 20px;
+    }
 }
 
 .table__cell_link {
     width: 40px;
+
+    @media screen and (max-width: 768px) {
+        padding-left: 0px;
+        width: 15px;
+    }
 }
 
 .table__head {
@@ -450,8 +530,13 @@ img.promo-image__img {
     background-image: url("__static__general/download-hover.png");
 }
 
+.genres-wrapper {
+    width: 100%;
+}
+
 .title {
     position: relative;
+    z-index: 2;
 
     .pd-0();
     margin-top: 52px;
@@ -485,6 +570,10 @@ img.promo-image__img {
     @media screen and (max-width: 1024px) {
         left: calc(-(@paddings - @paddings1024));
     }
+
+    @media screen and (max-width: 768px) {
+        left: calc(-(@paddings - @paddings768));
+    }
 }
 
 
@@ -510,6 +599,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1024px) {
         .pd-page1024();
+    }
+
+    @media screen and (max-width: 768px) {
+        .pd-page768();
     }
 
 }
@@ -566,6 +659,10 @@ img.promo-image__img {
     @media screen and (max-width: 1024px) {
         .pd-page1024();
     }
+
+    @media screen and (max-width: 768px) {
+        .pd-page768();
+    }
 }
 
 .schedule {
@@ -601,6 +698,10 @@ img.promo-image__img {
     @media screen and (max-width: 1024px) {
         margin: 0 calc(@paddings1024 - 22px);
     }
+
+    @media screen and (max-width: 768px) {
+        margin: 0 calc(@paddings768 - 22px);
+    }
 }
 
 .schedule__item {
@@ -620,6 +721,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1024px) {
         margin-left: @paddings1024;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: @paddings768;
     }
 }
 
@@ -715,6 +820,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1024px) {
         left: calc(400px + @paddings1024);
+    }
+
+    @media screen and (max-width: 768px) {
+        left: calc(400px + @paddings768);
     }
 }
 
@@ -928,6 +1037,11 @@ img.promo-image__img {
     @media screen and (max-width: 1024px) {
         .pd-page1024();
     }
+
+    @media screen and (max-width: 768px) {
+        .pd-page768();
+        margin-bottom: 70px;
+    }
 }
 
 .news__title {
@@ -957,6 +1071,10 @@ img.promo-image__img {
     @media screen and (max-width: 1024px) {
         .pd-page1024();
     }
+
+    @media screen and (max-width: 768px) {
+        .pd-page768();
+    }
 }
 
 .contacts__subscribe {
@@ -968,6 +1086,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1024px) {
         .pd-page1024();
+    }
+
+    @media screen and (max-width: 768px) {
+        .pd-page768();
     }
 }
 
@@ -988,6 +1110,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1024px) {
         background-position: calc(-(@paddings - @paddings1024));
+    }
+
+    @media screen and (max-width: 768px) {
+        background-position: -300px;
     }
 }
 
