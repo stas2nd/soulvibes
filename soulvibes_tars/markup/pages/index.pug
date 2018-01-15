@@ -21,6 +21,7 @@ html(class="no-js", lang="en")
                     h1.player__title.visually-hidden PLAYER
                     button.player__button.player__button_play(type='button' aria-label='play song')
                         img.player__image.player__image_play(src='__static__/img/general/play.png' width='14px' height='25px' alt='play')
+                        img.player__image.player__image_pause(src='__static__/img/general/pause.png' width='13px' height='24px' alt='pause')
                     .player__slider.slider
                         p.slider__song The Diary of Jane - Breaking Benjamin
                         p.slider__time 3:20
@@ -102,40 +103,40 @@ html(class="no-js", lang="en")
                     h1.events__title.title
                         a.events__link.title__link(name='events') Upcoming Events
                     .events__schedule.schedule
-                        .schedule__item
+                        .schedule__item(tabindex=0)
                             p.schedule__date Wednesday  / 22 Dec 2017 /  12:00 PM
                             h1.schedule__title Linkin Park
                             p.schedule__club Ziggo Dome
                             address.schedule__address De Passage 100, Amsterdam, Netherlands
-                            .schedule__popup.popup
-                                h2.popup__title Linkin Park
-                                p.popup__tour One More Light World Tour
-                                table.popup__table.popup-table
-                                    tr.popup-table__row
-                                        th.popup-table__head Address & Date
-                                        th.popup-table__head.popup-table__head_pr Price
-                                    tr.popup-table__row
-                                        td.popup-table__cell.cell
-                                            p.cell__p.cell__p_addr Mohegan Sun Arena Uncasville, CT
-                                            p.cell__p.cell__p_date Wed , 22 Dec 2017 , 12:00 PM
-                                        td.popup-table__cell.cell
-                                            span.cell__p.cell__p_unit $
-                                            span.cell__p.cell__p_summ 100
-                                p.popup__time-title Time Remaining
-                                .popup__time
-                                    .popup__count.count
-                                        p.count__num 04
-                                        p.count__unit Days
-                                    .popup__count.count
-                                        p.count__num 07
-                                        p.count__unit Hours
-                                    .popup__count.count
-                                        p.count__num 46
-                                        p.count__unit Minutes
-                                a.popup__link.button(href='#') Purchase Tickets
-                                a.popup__share(href='#')
-                                    span.visually-hidden Share
-                        .schedule__item
+                        .schedule__popup.popup
+                            h2.popup__title Linkin Park
+                            p.popup__tour One More Light World Tour
+                            table.popup__table.popup-table
+                                tr.popup-table__row
+                                    th.popup-table__head Address & Date
+                                    th.popup-table__head.popup-table__head_pr Price
+                                tr.popup-table__row
+                                    td.popup-table__cell.cell
+                                        p.cell__p.cell__p_addr Mohegan Sun Arena Uncasville, CT
+                                        p.cell__p.cell__p_date Wed , 22 Dec 2017 , 12:00 PM
+                                    td.popup-table__cell.cell
+                                        span.cell__p.cell__p_unit $
+                                        span.cell__p.cell__p_summ 100
+                            p.popup__time-title Time Remaining
+                            .popup__time
+                                .popup__count.count
+                                    p.count__num 04
+                                    p.count__unit Days
+                                .popup__count.count
+                                    p.count__num 07
+                                    p.count__unit Hours
+                                .popup__count.count
+                                    p.count__num 46
+                                    p.count__unit Minutes
+                            a.popup__link.button(href='#') Purchase Tickets
+                            a.popup__share(href='#')
+                                span.visually-hidden Share
+                        .schedule__item(tabindex=0)
                             p.schedule__date Wednesday  / 22 Dec 2017 /  12:00 PM
                             h1.schedule__title Burger kill
                             p.schedule__club Ziggo Dome
@@ -145,18 +146,21 @@ html(class="no-js", lang="en")
                         a.news__link.title__link(name='news') Latest News
                     .news__wrapper
                         +news(
+                        'park',
                         '21 MARCH 2017',
                         'Donec ac pellentesque justo, quis rutrum tortor',
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',
                         '#'
                         )
                         +news(
+                        'park',
                         '21 MARCH 2017',
                         'Donec ac pellentesque justo, quis rutrum tortor',
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',
                         '#'
                         )
                         +news(
+                        'park',
                         '21 MARCH 2017',
                         'Donec ac pellentesque justo, quis rutrum tortor',
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam',

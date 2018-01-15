@@ -1,6 +1,6 @@
 include ../button/button.pug
-mixin news(date, title, text, buttonHref)
-    .news__item.block
+mixin news(cls, date, title, text, buttonHref)
+    .news__item.block(class='block_' + cls)
         p.block__date= date
         h1.block__title= title
         p.block__desc= text
