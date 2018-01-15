@@ -20,6 +20,13 @@ if (playbtn) {
     });
 }
 
+if (listbtn && playlist) {
+    listbtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        playlist.classList.toggle('display-block');
+    });
+}
+
 if (popupone) {
     eventone.addEventListener('click', function (evt) {
         evt.preventDefault();
