@@ -1,7 +1,7 @@
 // Common styles of the project
 
 html, body {
-    min-width: @width-page;
+    //min-width: @width-page;
     height: 100%;
 }
 
@@ -26,6 +26,12 @@ body {
         width: @width-page1280;
 
         .container1280()
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: @width-page1024;
+
+        .container1024()
     }
 
 }
@@ -69,6 +75,10 @@ input[type="radio"].visually-hidden {
     @media screen and (max-width: 1280px) {
         .container1280();
     }
+
+    @media screen and (max-width: 1024px) {
+        .container1024();
+    }
 }
 
 .promo-image {
@@ -96,6 +106,10 @@ input[type="radio"].visually-hidden {
     @media screen and (max-width: 1280px) {
         .pd-page1280();
     }
+
+    @media screen and (max-width: 1024px) {
+        .pd-page1024();
+    }
 }
 
 img.promo-image__img {
@@ -106,7 +120,11 @@ img.promo-image__img {
     .pd-0();
 
     @media screen and (max-width: 1280px) {
-        left: -60px;
+        left: calc(-(@paddings - @paddings1280));
+    }
+
+    @media screen and (max-width: 1024px) {
+        left: calc(-(@paddings - @paddings1024));
     }
 }
 
@@ -124,6 +142,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1280px) {
         .pd-page1280();
+    }
+
+    @media screen and (max-width: 1024px) {
+        .pd-page1024();
     }
 }
 
@@ -308,6 +330,10 @@ img.promo-image__img {
     @media screen and (max-width: 1280px) {
         right: @paddings1280;
     }
+
+    @media screen and (max-width: 1024px) {
+        right: @paddings1024;
+    }
 }
 
 .display_block {
@@ -453,7 +479,11 @@ img.promo-image__img {
     left: 0;
 
     @media screen and (max-width: 1280px) {
-        left: -60px;
+        left: calc(-(@paddings - @paddings1280));
+    }
+
+    @media screen and (max-width: 1024px) {
+        left: calc(-(@paddings - @paddings1024));
     }
 }
 
@@ -476,6 +506,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1280px) {
         .pd-page1280();
+    }
+
+    @media screen and (max-width: 1024px) {
+        .pd-page1024();
     }
 
 }
@@ -528,6 +562,10 @@ img.promo-image__img {
     @media screen and (max-width: 1280px) {
         .pd-page1280();
     }
+
+    @media screen and (max-width: 1024px) {
+        .pd-page1024();
+    }
 }
 
 .schedule {
@@ -546,6 +584,7 @@ img.promo-image__img {
     position: absolute;
     top: -97px;
     right: 0;
+    z-index: 1;
 
     width: 544px;
     height: 604px;
@@ -557,6 +596,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1280px) {
         margin: 0 calc(@paddings1280 - 22px);
+    }
+
+    @media screen and (max-width: 1024px) {
+        margin: 0 calc(@paddings1024 - 22px);
     }
 }
 
@@ -573,6 +616,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1280px) {
         margin-left: @paddings1280;
+    }
+
+    @media screen and (max-width: 1024px) {
+        margin-left: @paddings1024;
     }
 }
 
@@ -651,7 +698,7 @@ img.promo-image__img {
     position: absolute;
     z-index: 5;
     top: 33px;
-    left: 609px;
+    left: calc(400px + @paddings);
 
     width: 260px;
     padding: 15px 20px 22px;
@@ -661,6 +708,14 @@ img.promo-image__img {
     background-color: white;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.45);
     border-radius: 3px;
+
+    @media screen and (max-width: 1280px) {
+        left: calc(400px + @paddings1280);
+    }
+
+    @media screen and (max-width: 1024px) {
+        left: calc(400px + @paddings1024);
+    }
 }
 
 .schedule__popup:hover {
@@ -869,6 +924,10 @@ img.promo-image__img {
     @media screen and (max-width: 1280px) {
         .pd-page1280();
     }
+
+    @media screen and (max-width: 1024px) {
+        .pd-page1024();
+    }
 }
 
 .news__title {
@@ -895,6 +954,9 @@ img.promo-image__img {
     @media screen and (max-width: 1280px) {
         .pd-page1280();
     }
+    @media screen and (max-width: 1024px) {
+        .pd-page1024();
+    }
 }
 
 .contacts__subscribe {
@@ -902,6 +964,10 @@ img.promo-image__img {
 
     @media screen and (max-width: 1280px) {
         .pd-page1280();
+    }
+
+    @media screen and (max-width: 1024px) {
+        .pd-page1024();
     }
 }
 
@@ -917,7 +983,11 @@ img.promo-image__img {
     background-repeat: no-repeat;
 
     @media screen and (max-width: 1280px) {
-        background-position: -60px;
+        background-position: calc(-(@paddings - @paddings1280));
+    }
+
+    @media screen and (max-width: 1024px) {
+        background-position: calc(-(@paddings - @paddings1024));
     }
 }
 
