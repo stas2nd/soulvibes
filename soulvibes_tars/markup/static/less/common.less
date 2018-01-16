@@ -851,7 +851,7 @@ img.promo-image__img {
 
     color: white;
 
-    cursor: pointer;
+//    cursor: pointer;
 
     @media screen and (max-width: 1280px) {
         margin-left: @paddings1280;
@@ -989,6 +989,8 @@ img.promo-image__img {
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.45);
     border-radius: 3px;
 
+    animation: appear 0.3s;
+
     @media screen and (max-width: 1280px) {
         left: calc(400px + @paddings1280);
     }
@@ -1007,6 +1009,33 @@ img.promo-image__img {
 
         left: calc(280px + @paddings560);
     }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0.2;
+    }
+
+    33% {
+        opacity: 0.5;
+    }
+
+    66% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.schedule__item:hover + .schedule__popup,
+.schedule__item:focus + .schedule__popup {
+    display: flex;
+}
+
+.schedule__popup:hover {
+    display: flex;
 }
 
 .display-flex {
