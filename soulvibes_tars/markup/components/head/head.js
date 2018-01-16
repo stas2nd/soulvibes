@@ -24,12 +24,13 @@ if (listbtn && playlist) {
     listbtn.addEventListener('click', function (evt) {
         evt.preventDefault();
         playlist.classList.toggle('display-block');
+        listbtn.classList.toggle('button_active');
     });
 }
 
-if (popupone) {
-    eventone.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        popupone.classList.toggle('display-flex');
-    });
-}
+// if (popupone) {
+//     eventone.addEventListener('click', function (evt) {
+//         evt.preventDefault();
+//         popupone.classList.toggle('display-flex');
+//     });
+// }

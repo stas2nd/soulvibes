@@ -29,6 +29,12 @@
         .pd-page560();
         padding-top: 24px;
     }
+
+    @media screen and (max-width: 559px) {
+        width: @width-content380;
+        .pd-page380();
+        padding-top: 24px;
+    }
 }
 
 .header__logo {
@@ -63,6 +69,10 @@
         position: relative;
 
         margin-top: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+        //margin-right: 10px;
     }
 }
 
@@ -152,7 +162,7 @@
 
         opacity: 0;
 
-        transition: all 0.6s;
+        transition: all 1s;
     }
 }
 
