@@ -46,6 +46,12 @@ body {
         .container560();
     }
 
+    @media screen and (max-width: 559px) {
+        width: @width-page380;
+
+        .container380();
+    }
+
 }
 
 img {
@@ -137,6 +143,8 @@ input[type="radio"].visually-hidden {
 
     @media screen and (max-width: 767px) {
         .pd-page560();
+
+        font-size: 68px;
     }
 }
 
@@ -189,6 +197,10 @@ img.promo-image__img {
     }
 
     @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        height: 140px;
         .pd-page560();
     }
 }
@@ -211,9 +223,8 @@ img.promo-image__img {
     }
 
     @media screen and (max-width: 767px) {
-        width: 33px;
-        height: 33px;
-        margin-right: 7px;
+        margin-right: 20px;
+        margin-bottom: 10px;
     }
 }
 
@@ -234,8 +245,8 @@ img.promo-image__img {
     margin-left: -1px;
 
     @media screen and (max-width: 1399px) {
-        margin-right: 19px;
-        margin-left: -2px;
+        margin-right: 18px;
+        margin-left: -1px;
     }
 
     @media screen and (max-width: 1023px) {
@@ -244,10 +255,10 @@ img.promo-image__img {
     }
 
     @media screen and (max-width: 767px) {
-        width: 36px;
-        height: 36px;
-        margin-right: 5px;
+        margin-right: 18px;
         margin-left: -1px;
+        margin-bottom: 6px;
+        margin-top: -4px;
     }
 }
 
@@ -260,7 +271,8 @@ img.promo-image__img {
     margin-left: -1px;
 
     @media screen and (max-width: 1399px) {
-        margin-left: -2px;
+        margin-left: -1px;
+        margin-right: -2px;
     }
 
     @media screen and (max-width: 1023px) {
@@ -270,6 +282,7 @@ img.promo-image__img {
     @media screen and (max-width: 767px) {
         margin-left: -1px;
     }
+
 }
 
 .player__button_play {
@@ -286,9 +299,9 @@ img.promo-image__img {
     }
 
     @media screen and (max-width: 767px) {
-        width: 50px;
-        height: 50px;
-        margin-right: 7px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        margin-right: 23px;
     }
 }
 
@@ -301,16 +314,21 @@ img.promo-image__img {
     height: 61px;
     margin-right: 22px;
 
+    @media screen and (max-width: 1399px) {
+        margin-right: 22px;
+        margin-left: -2px;
+    }
+
     @media screen and (max-width: 1023px) {
         margin-right: 11px;
         margin-left: -2px;
     }
 
     @media screen and (max-width: 767px) {
-        width: 53px;
-        height: 53px;
-        margin-right: 5px;
+        margin-right: 21px;
         margin-left: -2px;
+        margin-bottom: -1px;
+        margin-top: 9px;
     }
 }
 
@@ -322,17 +340,13 @@ img.promo-image__img {
 
 .player__image_play {
     margin-left: 23px;
-
-    @media screen and (max-width: 767px) {
-        margin-left: 19px;
-    }
 }
 
 .player__image_pause {
     margin-left: 21px;
 
-    @media screen and (max-width: 767px) {
-        margin-left: 17px;
+    @media screen and (max-width: 1399px) {
+        margin-left: 21px;
     }
 }
 
@@ -340,15 +354,15 @@ img.promo-image__img {
     margin-left: 24px;
 
     @media screen and (max-width: 767px) {
-        margin-left: 20px;
+        margin-left: 24px;
     }
 }
 
 .player__button_pause:active .player__image_pause {
     margin-left: 22px;
 
-    @media screen and (max-width: 767px) {
-        margin-left: 18px;
+    @media screen and (max-width: 1399px) {
+        margin-left: 22px;
     }
 }
 
@@ -375,8 +389,9 @@ img.promo-image__img {
     }
 
     @media screen and (max-width: 767px) {
-        width: 260px;
-        margin-right: 7px;
+        width: 420px;
+        margin-top: 10px;
+        margin-right: 0;
     }
 }
 
@@ -388,12 +403,6 @@ img.promo-image__img {
 
     font-size: 14px;
     line-height: 1.2em;
-
-    @media screen and (max-width: 767px) {
-        width: 210px;
-
-        font-size: 13px;
-    }
 }
 
 .slider__time {
@@ -404,10 +413,6 @@ img.promo-image__img {
     vertical-align: top;
     font-size: 12px;
     line-height: 1.2em;
-
-    @media screen and (max-width: 767px) {
-        font-size: 11px;
-    }
 }
 
 .slider__range {
@@ -483,12 +488,15 @@ img.promo-image__img {
 
     @media screen and (max-width: 1023px) {
         right: @paddings768;
+
         width: @width-content768;
     }
 
     @media screen and (max-width: 767px) {
-        right: @paddings560;
-        width: @width-content560;
+        top: 136px;
+        right: 15px;
+
+        width: 530px;
     }
 }
 
@@ -509,6 +517,10 @@ img.promo-image__img {
     background-image: url("__static__general/playlist.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media screen and (max-width: 767px) {
+        right: 131px;
+    }
 }
 
 .player__table {
@@ -677,6 +689,10 @@ img.promo-image__img {
     background-repeat: no-repeat;
     background-position: center;
 
+    @media screen and (max-width: 767px) {
+        left: -226px;
+    }
+
 }
 
 .events__title::before,
@@ -696,7 +712,7 @@ img.promo-image__img {
     }
 
     @media screen and (max-width: 767px) {
-        left: calc(-(@paddings - @paddings560));
+        left: calc(-(@paddings - 34px));
     }
 }
 
@@ -741,6 +757,11 @@ img.promo-image__img {
     justify-content: center;
 
     margin-bottom: 13px;
+
+    @media screen and (max-width: 767px) {
+        justify-content: space-between;
+    }
+
 }
 
 .genres__button {
@@ -889,6 +910,10 @@ img.promo-image__img {
     height: 100%;
 
     background-color: white;
+
+    @media screen and (max-width: 767px) {
+        left: 3px;
+    }
 }
 
 .schedule__date {
@@ -901,7 +926,7 @@ img.promo-image__img {
     line-height: 1.2em;
 
     @media screen and (max-width: 767px) {
-        margin-left: 23px;
+        margin-left: 20px;
 
         font-size: 12px;
     }
@@ -920,7 +945,7 @@ img.promo-image__img {
     border-radius: 50%;
 
     @media screen and (max-width: 767px) {
-        left: -19px;
+        left: -22px;
     }
 }
 
@@ -934,7 +959,7 @@ img.promo-image__img {
     font-weight: 700;
 
     @media screen and (max-width: 767px) {
-        margin-left: 25px;
+        margin-left: 22px;
 
         font-size: 40px;
     }
@@ -949,7 +974,7 @@ img.promo-image__img {
     line-height: 24px;
 
     @media screen and (max-width: 767px) {
-        margin-left: 30px;
+        margin-left: 27px;
 
         font-size: 12px;
     }
@@ -964,7 +989,7 @@ img.promo-image__img {
     font-style: normal;
 
     @media screen and (max-width: 767px) {
-        margin-left: 30px;
+        margin-left: 27px;
 
         font-size: 12px;
     }
@@ -1007,7 +1032,7 @@ img.promo-image__img {
         width: 220px;
         padding: 15px;
 
-        left: calc(280px + @paddings560);
+        left: calc(266px + @paddings560);
     }
 }
 
