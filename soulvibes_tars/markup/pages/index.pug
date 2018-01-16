@@ -16,27 +16,27 @@ html(class="no-js", lang="en")
             main
                 .promo-image
                     h1.promo-image__title High Quality Internet Music Stations
-                    img.promo-image__img(src='__static__/img/content/promo.jpg' width='1400px' height='588px' alt='promo')
+                    img.promo-image__img(src='__static__/img/content/promo.jpg' width='1400' height='588' alt='promo')
                 section.player
                     h1.player__title.visually-hidden PLAYER
                     button.player__button.player__button_play(type='button' aria-label='play song')
-                        img.player__image.player__image_play(src='__static__/img/general/play.png' width='14px' height='25px' alt='play')
-                        img.player__image.player__image_pause(src='__static__/img/general/pause.png' width='13px' height='24px' alt='pause')
+                        img.player__image.player__image_play(src='__static__/img/general/play.png' width='14' height='25' alt='play')
+                        img.player__image.player__image_pause(src='__static__/img/general/pause.png' width='13' height='24' alt='pause')
                     .player__slider.slider
                         p.slider__song The Diary of Jane - Breaking Benjamin
                         p.slider__time 3:20
                         .slider__range
                             button.slider__button(type='button' aria-label='song')
                     button.player__button.player__button_vol(type='button' aria-label='volume')
-                        img.player__image.player__image_vol(src='__static__/img/general/volume.png' width='22px' height='18px' alt='volume')
+                        img.player__image.player__image_vol(src='__static__/img/general/volume.png' width='22' height='18' alt='volume')
                     button.player__button.player__button_prev(type='button' aria-label='previous song')
-                        img.player__image.player__image_prev(src='__static__/img/general/prev.png' width='12px' height='17px' alt='previous')
+                        img.player__image.player__image_prev(src='__static__/img/general/prev.png' width='12' height='17' alt='previous')
                     button.player__button.player__button_next(type='button' aria-label='next song')
-                        img.player__image.player__image_next(src='__static__/img/general/next.png' width='12px' height='17px' alt='next')
+                        img.player__image.player__image_next(src='__static__/img/general/next.png' width='12' height='17' alt='next')
                     button.player__button.player__button_loop(type='button' aria-label='loop song')
-                        img.player__image.player__image_loop(src='__static__/img/general/loop.png' width='18px' height='20px' alt='loop')
+                        img.player__image.player__image_loop(src='__static__/img/general/loop.png' width='18' height='20' alt='loop')
                     button.player__button.player__button_qu(type='button' aria-label='queue')
-                        img.player__image.player__image_qu(src='__static__/img/general/queue.png' width='16px' height='13px' alt='queue')
+                        img.player__image.player__image_qu(src='__static__/img/general/queue.png' width='16' height='13' alt='queue')
                     .player__playlist
                         table.player__table.table
                             tr.table__row
@@ -88,7 +88,7 @@ html(class="no-js", lang="en")
                                     a.table__link(href='#')
                 section.genres
                     h1.genres__title.title
-                        a.genres__link.title__link(name='genres') Genres Stations
+                        a.genres__link.title__link(id='genres') Genres Stations
                     .genres-wrapper
                         +genre( 'Trending Top', 'top', '#')
                         +genre( 'Rock', 'rock','#')
@@ -101,7 +101,7 @@ html(class="no-js", lang="en")
                     button.button.genres__button Load more
                 section.events
                     h1.events__title.title
-                        a.events__link.title__link(name='events') Upcoming Events
+                        a.events__link.title__link(id='events') Upcoming Events
                     .events__schedule.schedule
                         .schedule__item.schedule__item_one(tabindex=0 aria-label='Event information')
                             p.schedule__date Wednesday  / 22 Dec 2017 /  12:00 PM
@@ -143,7 +143,7 @@ html(class="no-js", lang="en")
                             address.schedule__address De Passage 100, Amsterdam, Netherlands
                 section.news
                     h1.news__title.title
-                        a.news__link.title__link(name='news') Latest News
+                        a.news__link.title__link(id='news') Latest News
                     .news__wrapper
                         +news(
                         'park',
@@ -168,11 +168,11 @@ html(class="no-js", lang="en")
                         )
                 section.contacts
                     h1.contacts__title.title
-                        a.contacts__link.title__link(name='contacts') Contact Us
+                        a.contacts__link.title__link(id='contacts') Contact Us
                     .contacts__subscribe.subscribe
                         h1.subscribe__title Join Our Community
                         p.subscribe__tip Be among the first to hear about our new tracks, events, news and so much more!
-                        form.subscribe__form(action='' method='get')
+                        form.subscribe__form(method='get')
                                 label.visually-hidden(for='subscribe__field') Your email address
                                 input.subscribe__field(type='text' name='email' id='subscribe__field' placeholder='Your email address')
                                 button.subscribe__button(type='submit') Subscribes
